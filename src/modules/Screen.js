@@ -31,9 +31,9 @@ export default function Screen({
       style={{ backgroundColor: currentTheme.screenBg }}
       className="screen"
     >
-      <h3 style={{ opacity: keyboardMessage }}>
+      <h2 style={{ opacity: keyboardMessage }}>
         Click on the screen to use your keyboard
-      </h3>
+      </h2>
       {result === 0 && (
         <p style={{ color: currentTheme.screenText }}>
           {operation === "" ? "0" : operation}

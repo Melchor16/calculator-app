@@ -18,7 +18,11 @@ export default function ToggleTitle({ currentTheme, setCurrentTheme, themes }) {
           <p style={{ color: currentTheme.screenText }}>2</p>
           <p style={{ color: currentTheme.screenText }}>3</p>
         </div>
+        <label for="theme-selector" style={{ display: "none" }}>
+          Theme selector
+        </label>
         <input
+          id="theme-selector"
           onChange={(e) => handleSetTheme(e)}
           type="range"
           defaultValue="1"
