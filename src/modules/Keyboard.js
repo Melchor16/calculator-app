@@ -1,174 +1,133 @@
 import Button from "./Button";
 
-export default function Keyboard({
-  currentTheme,
-  setOperation,
-  setResult,
-  operation,
-}) {
+export default function Keyboard({ currentTheme, mainCalculation }) {
   return (
     <div
       style={{ backgroundColor: currentTheme.keypadBg }}
       className="keyboard"
     >
       <Button
-        setOperation={setOperation}
-        operation={operation}
-        setResult={setResult}
         currentTheme={currentTheme}
+        mainCalculation={mainCalculation}
         className="number"
       >
         7
       </Button>
       <Button
-        setOperation={setOperation}
-        operation={operation}
-        setResult={setResult}
         currentTheme={currentTheme}
+        mainCalculation={mainCalculation}
         className="number"
       >
         8
       </Button>
       <Button
-        setOperation={setOperation}
-        operation={operation}
-        setResult={setResult}
         currentTheme={currentTheme}
+        mainCalculation={mainCalculation}
         className="number"
       >
         9
       </Button>
       <Button
-        setOperation={setOperation}
-        operation={operation}
-        setResult={setResult}
         currentTheme={currentTheme}
+        mainCalculation={mainCalculation}
         className="delete"
       >
         DEL
       </Button>
       <Button
-        setOperation={setOperation}
-        operation={operation}
-        setResult={setResult}
         currentTheme={currentTheme}
+        mainCalculation={mainCalculation}
         className="number"
       >
         4
       </Button>
       <Button
-        setOperation={setOperation}
-        operation={operation}
-        setResult={setResult}
         currentTheme={currentTheme}
+        mainCalculation={mainCalculation}
         className="number"
       >
         5
       </Button>
       <Button
-        setOperation={setOperation}
-        operation={operation}
-        setResult={setResult}
         currentTheme={currentTheme}
+        mainCalculation={mainCalculation}
         className="number"
       >
         6
       </Button>
       <Button
-        setOperation={setOperation}
-        operation={operation}
-        setResult={setResult}
         currentTheme={currentTheme}
+        mainCalculation={mainCalculation}
         className="number"
       >
         +
       </Button>
       <Button
-        setOperation={setOperation}
-        operation={operation}
-        setResult={setResult}
         currentTheme={currentTheme}
+        mainCalculation={mainCalculation}
         className="number"
       >
         1
       </Button>
       <Button
-        setOperation={setOperation}
-        operation={operation}
-        setResult={setResult}
         currentTheme={currentTheme}
+        mainCalculation={mainCalculation}
         className="number"
       >
         2
       </Button>
       <Button
-        setOperation={setOperation}
-        operation={operation}
-        setResult={setResult}
         currentTheme={currentTheme}
+        mainCalculation={mainCalculation}
         className="number"
       >
         3
       </Button>
       <Button
-        setOperation={setOperation}
-        operation={operation}
-        setResult={setResult}
         currentTheme={currentTheme}
+        mainCalculation={mainCalculation}
         className="number"
       >
         -
       </Button>
       <Button
-        setOperation={setOperation}
-        operation={operation}
-        setResult={setResult}
         currentTheme={currentTheme}
+        mainCalculation={mainCalculation}
         className="number"
       >
         .
       </Button>
       <Button
-        setOperation={setOperation}
-        operation={operation}
-        setResult={setResult}
         currentTheme={currentTheme}
+        mainCalculation={mainCalculation}
         className="number"
       >
         0
       </Button>
       <Button
-        setOperation={setOperation}
-        operation={operation}
-        setResult={setResult}
         currentTheme={currentTheme}
+        mainCalculation={mainCalculation}
         className="number"
       >
         /
       </Button>
       <Button
-        setOperation={setOperation}
-        operation={operation}
-        setResult={setResult}
         currentTheme={currentTheme}
+        mainCalculation={mainCalculation}
         className="number"
       >
         x
       </Button>
       <Button
-        setOperation={setOperation}
-        operation={operation}
-        setResult={setResult}
         currentTheme={currentTheme}
+        mainCalculation={mainCalculation}
         className="reset"
       >
         RESET
       </Button>
       <Button
-        setOperation={setOperation}
-        operation={operation}
-        setResult={setResult}
         currentTheme={currentTheme}
+        mainCalculation={mainCalculation}
         className="equal"
       >
         =

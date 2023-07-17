@@ -48,8 +48,30 @@ const themes = {
 function App() {
   const [currentTheme, setCurrentTheme] = useState(themes.theme1);
   const [operation, setOperation] = useState("");
-  const [result, setResult] = useState(0);
   const [keyboardMessage, setKeyboardaMessagge] = useState(1);
+
+  function mainCalculation(value) {
+    if (value === "+" || value === "-" || value === "*" || value === "/") {
+      setOperation((op) => op + " " + value + " ");
+    } else if (value === "DEL" || value === "Backspace") {
+      setOperation((op) => op.slice(0, -1));
+    } else if (value === "RESET" || value === "Escape") {
+      setOperation("");
+    } else if ((value === "=" || value === "Enter") && isNaN(operation)) {
+      try {
+        let result = eval(operation);
+        Number.isInteger(result)
+          ? setOperation(result.toString())
+          : setOperation(result.toFixed(3).toString());
+      } catch (e) {
+        if (e instanceof SyntaxError) {
+          alert("Invalid operation, please provide a valid operation");
+        }
+      }
+    } else if ((!isNaN(value) || value === ".") && value !== " ") {
+      setOperation((op) => op + value);
+    }
+  }
 
   setTimeout(() => {
     setKeyboardaMessagge(0);
@@ -68,17 +90,13 @@ function App() {
         />
         <Screen
           currentTheme={currentTheme}
-          setOperation={setOperation}
           operation={operation}
-          result={result}
-          setResult={setResult}
           keyboardMessage={keyboardMessage}
+          mainCalculation={mainCalculation}
         />
         <Keyboard
           currentTheme={currentTheme}
-          operation={operation}
-          setOperation={setOperation}
-          setResult={setResult}
+          mainCalculation={mainCalculation}
         />
       </div>
     </div>

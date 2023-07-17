@@ -2,9 +2,7 @@ export default function Button({
   children,
   className,
   currentTheme,
-  operation,
-  setOperation,
-  setResult,
+  mainCalculation,
 }) {
   const numberKey = {
     color: currentTheme.textColor,
@@ -22,26 +20,6 @@ export default function Button({
     boxShadow: `-2px -3.5px 1px 0px ${currentTheme.eqShadow} inset`,
   };
 
-  function handleButtonClick(e) {
-    if (
-      e.target.value === "+" ||
-      e.target.value === "-" ||
-      e.target.value === "x" ||
-      e.target.value === "/"
-    ) {
-      setOperation((op) => op + " " + e.target.value + " ");
-    } else if (e.target.value === "DEL") {
-      setOperation((op) => op.slice(0, -1));
-    } else if (e.target.value === "RESET") {
-      setOperation("");
-      setResult(0);
-    } else if (e.target.value === "=") {
-      setResult(eval(operation));
-    } else {
-      setOperation((op) => op + e.target.value);
-    }
-  }
-
   return (
     <div className={` ${className}`}>
       <button
@@ -52,7 +30,7 @@ export default function Button({
             ? delResKey
             : eqKey
         }
-        onClick={(e) => handleButtonClick(e)}
+        onClick={(e) => mainCalculation(e.target.value)}
         value={children === "x" ? "*" : children}
       >
         {children}
